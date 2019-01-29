@@ -18,7 +18,7 @@ namespace Engine.Models
         /// <summary>
         /// Player's class
         /// </summary>
-        public int Class { get; set; }
+        public string Class { get; set; }
         /// <summary>
         /// Player's level
         /// </summary>
