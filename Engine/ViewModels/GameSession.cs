@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.ViewModels
 {
-    class GameSession
+    public class GameSession
     {
         /// <summary>
         /// Instatiation of the player 
