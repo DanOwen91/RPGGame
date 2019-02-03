@@ -4,3 +4,10 @@ D:\Projects\RPGGame\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
 D:\Projects\RPGGame\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
 D:\Projects\RPGGame\Engine\obj\Debug\Engine.dll
 D:\Projects\RPGGame\Engine\obj\Debug\Engine.pdb
+D:\Projects\DanOwen91\RPGGame\Engine\bin\Debug\Engine.dll
+D:\Projects\DanOwen91\RPGGame\Engine\bin\Debug\Engine.pdb
+D:\Projects\DanOwen91\RPGGame\Engine\obj\Debug\Engine.csprojAssemblyReference.cache
+D:\Projects\DanOwen91\RPGGame\Engine\obj\Debug\Engine.csproj.CoreCompileInputs.cache
+D:\Projects\DanOwen91\RPGGame\Engine\obj\Debug\Engine.dll
+D:\Projects\DanOwen91\RPGGame\Engine\obj\Debug\Engine.pdb
+D:\Projects\DanOwen91\RPGGame\Engine\obj\Debug\Engine.g.resources
