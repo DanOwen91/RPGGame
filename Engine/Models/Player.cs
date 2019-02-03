@@ -10,7 +10,7 @@ namespace Engine.Models
     /// <summary>
     /// Character Class
     /// </summary>
-    public class Player : INotifyPropertyChanged
+    public class Player : NotifyPropertyChangedBase
     {
         /// <summary>
         /// Player's name
@@ -23,7 +23,7 @@ namespace Engine.Models
             set
             {
                 playerName = value;
-                OnPropertyChanged("PlayerName");
+                OnPropertyChanged(nameof(PlayerName));
             }
         }
 
@@ -38,7 +38,7 @@ namespace Engine.Models
             set
             {
                 _class = value;
-                OnPropertyChanged("Class");
+                OnPropertyChanged(nameof(Class));
             }
         }
 
@@ -53,7 +53,7 @@ namespace Engine.Models
             set
             {
                 level = value;
-                OnPropertyChanged("Level");
+                OnPropertyChanged(nameof(Level));
             }
         }
 
@@ -68,7 +68,7 @@ namespace Engine.Models
             set
             {
                 hitPoints = value;
-                OnPropertyChanged("HitPoints");
+                OnPropertyChanged(nameof(HitPoints));
             }
 
         }
@@ -84,7 +84,7 @@ namespace Engine.Models
             set
             {
                 gold = value;
-                OnPropertyChanged("Gold");
+                OnPropertyChanged(nameof(Gold));
             }
         }
 
@@ -99,20 +99,9 @@ namespace Engine.Models
             set
             {
                 experiencePoints = value;
-                OnPropertyChanged("ExperiencePoints");
+                OnPropertyChanged(nameof(ExperiencePoints));
             }
         }
-        /// <summary>
-        /// Property changed event handler
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// Method to invoke property change updates to the event handler
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+
     }
 }
