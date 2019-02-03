@@ -4,34 +4,101 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Engine.Factories;
+using System.ComponentModel;
 
 namespace Engine.ViewModels
 {
-    public class GameSession
+    public class GameSession : INotifyPropertyChanged
     {
         /// <summary>
         /// Instatiation of the player 
         /// </summary>
         public Player CurrentPlayer { get; set; }
-        public Location CurrentLocation { get; set; }
+        
+        /// <summary>
+        /// Current instance of the world
+        /// </summary>
         public World CurrentWorld { get; set; }
+
+        private Location currentLocation;
+        /// <summary>
+        /// Current location of the of the game session
+        /// </summary>
+        public Location CurrentLocation
+        {
+            get { return currentLocation; }
+            set
+            {
+                currentLocation = value;
+                OnPropertyChanged("CurrentLocation");
+
+                OnPropertyChanged("HasLocationToNorth");
+                OnPropertyChanged("HasLocationToSouth");
+                OnPropertyChanged("HasLocationToEast");
+                OnPropertyChanged("HasLocationToWest");
+
+            }
+        }
+
+
+        public bool HasLocationToNorth
+        {
+            get { return CurrentWorld.LocationAt(CurrentLocation.XCordinate, CurrentLocation.YCordinate + 1) != null; }
+        }
+        public bool HasLocationToSouth
+        {
+            get { return CurrentWorld.LocationAt(CurrentLocation.XCordinate, CurrentLocation.YCordinate - 1) != null; }
+        }
+        public bool HasLocationToEast
+        {
+            get { return CurrentWorld.LocationAt(CurrentLocation.XCordinate + 1, CurrentLocation.YCordinate) != null; }
+        }
+        public bool HasLocationToWest
+        {
+            get { return CurrentWorld.LocationAt(CurrentLocation.XCordinate - 1, CurrentLocation.YCordinate) != null; }
+        }
+       
 
         public GameSession()
         {
-            CurrentPlayer = new Player();
-            CurrentPlayer.PlayerName = "Dan";
-            CurrentPlayer.Gold = 10000000;
-            CurrentPlayer.ExperiencePoints = 0;
-            CurrentPlayer.HitPoints = 100;
-            CurrentPlayer.Class = "Turtle";
-            CurrentPlayer.Level = 1;
+            WorldFactory worldFactory = new WorldFactory();
+            PlayerFactory playerFactory = new PlayerFactory();
+            CurrentWorld = worldFactory.CreateWorld();
 
-            CurrentLocation = new Location();
-            CurrentLocation.Name = "Home";
-            CurrentLocation.XCordinate = -1;
-            CurrentLocation.YCordinate = 0;
-            CurrentLocation.Description = "This is the player home area";
-            CurrentLocation.ImageName = "/Engine;component/Images/Locations/HomeImage.png";
+            CurrentLocation = CurrentWorld.LocationAt(0, 0);
+            CurrentPlayer = playerFactory.CreatePlayer("Turtle");
+        }
+        public void MoveNorth()
+        {
+            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCordinate, CurrentLocation.YCordinate + 1);
+        }
+        public void MoveSouth()
+        {
+            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCordinate, CurrentLocation.YCordinate - 1);
+
+        }
+        public void MoveEast()
+        {
+            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCordinate + 1, CurrentLocation.YCordinate);
+
+        }
+        public void MoveWest()
+        {
+            CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCordinate - 1, CurrentLocation.YCordinate);
+
+        }
+        /// <summary>
+        /// Property changed event handler
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Method to invoke property change updates to the event handler
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

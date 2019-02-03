@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\PlayerFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Player.cs" />
@@ -51,6 +52,17 @@
   <ItemGroup>
     <Resource Include="Images\Locations\HomeImage.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Locations\TownCentre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Locations\ForrestImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Locations\ForrestWithPathImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Locations\ShopCounterImage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
