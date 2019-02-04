@@ -9,7 +9,7 @@ namespace Engine.Factories
 {
     internal class WorldFactory
     {
-        internal World CreateWorld()
+        internal static World CreateWorld()
         {
             World world = new World();
             world.AddLocation(-1, 0, "Home", "This is home", "/Engine;component/Images/Locations/HomeImage.png");

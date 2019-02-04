@@ -49,5 +49,9 @@ namespace WPFUI
         {
             _gameSession.MoveSouth();
         }
+        private void OnClick_TakeHome(object sender, RoutedEventArgs args)
+        {
+            _gameSession.TakeHome();
+        }
     }
 }

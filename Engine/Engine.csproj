@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\ItemFactory.cs" />
     <Compile Include="Factories\PlayerFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
+    <Compile Include="Interfaces\GameItems\IGameItem.cs" />
+    <Compile Include="Interfaces\GameItems\IWeapon.cs" />
+    <Compile Include="Models\GameItem.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\World.cs" />
     <Compile Include="NotifyPropertyChangedBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

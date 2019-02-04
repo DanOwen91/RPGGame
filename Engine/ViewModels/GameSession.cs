@@ -62,12 +62,10 @@ namespace Engine.ViewModels
 
         public GameSession()
         {
-            WorldFactory worldFactory = new WorldFactory();
-            PlayerFactory playerFactory = new PlayerFactory();
-            CurrentWorld = worldFactory.CreateWorld();
+            CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
-            CurrentPlayer = playerFactory.CreatePlayer("Turtle");
+            CurrentPlayer = PlayerFactory.CreatePlayer("Turtle");
         }
         public void MoveNorth()
         {
@@ -87,6 +85,10 @@ namespace Engine.ViewModels
         {
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCordinate - 1, CurrentLocation.YCordinate);
 
+        }
+        public void TakeHome()
+        {
+            CurrentLocation = CurrentWorld.LocationAt(-1, 0);
         }
     }
 }

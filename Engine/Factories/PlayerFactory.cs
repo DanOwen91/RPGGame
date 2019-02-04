@@ -9,7 +9,7 @@ namespace Engine.Factories
 {
     internal class PlayerFactory
     {
-        internal Player CreatePlayer(string Class)
+        internal static Player CreatePlayer(string Class)
         {
             if(Class.ToLower() == "turtle")
             {
