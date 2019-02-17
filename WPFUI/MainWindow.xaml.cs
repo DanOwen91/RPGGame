@@ -53,5 +53,29 @@ namespace WPFUI
         {
             _gameSession.TakeHome();
         }
+
+        private void Button_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Up)
+            {
+                _gameSession.MoveNorth();
+            }
+            if (e.Key == Key.Down)
+            {
+                _gameSession.MoveSouth();
+            }
+            if (e.Key == Key.Right)
+            {
+                _gameSession.MoveEast();
+            }
+            if (e.Key == Key.Left)
+            {
+                _gameSession.MoveWest();
+            }
+            if (e.Key == Key.H)
+            {
+                _gameSession.TakeHome();
+            }
+        }
     }
 }
