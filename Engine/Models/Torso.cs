@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    internal class Weapon : IWeapon
+    class Torso : IAmour
     {
-        public int MinimumDamage { get; set; }
-        public int MaxDamage { get; set; }
-        public int ItemId { get; set; } 
+        public int DefensePoints { get; set; }
         public string Name { get; set; }
+        public int ItemId { get; set; }
         public int Price { get; set; }
 
-        public Weapon(IGameItem gameItem, int minDamage ,int maxDamage)
+        public Torso(IGameItem gameItem, int def)
         {
-            this.MinimumDamage = minDamage;
-            this.MaxDamage = MaxDamage;
+            this.DefensePoints = def;
             this.Name = gameItem.Name;
             this.ItemId = gameItem.ItemId;
             this.Price = gameItem.Price;

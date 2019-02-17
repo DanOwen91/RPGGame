@@ -44,11 +44,16 @@
     <Compile Include="Factories\ItemFactory.cs" />
     <Compile Include="Factories\PlayerFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
+    <Compile Include="Interfaces\GameItems\IAmour.cs" />
     <Compile Include="Interfaces\GameItems\IGameItem.cs" />
     <Compile Include="Interfaces\GameItems\IWeapon.cs" />
+    <Compile Include="Interfaces\Player\IPlayer.cs" />
     <Compile Include="Models\GameItem.cs" />
+    <Compile Include="Models\Helmet.cs" />
+    <Compile Include="Models\Legs.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Torso.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\World.cs" />
     <Compile Include="NotifyPropertyChangedBase.cs" />

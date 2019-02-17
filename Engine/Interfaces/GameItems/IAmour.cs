@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Engine.Interfaces.GameItems
 {
-    public interface IGameItem
+    interface IAmour : IGameItem
     {
-        int ItemId { get; set; }
-        string Name { get; set; }
-        int Price { get; set; }
-
+        int DefensePoints { get; set; }
     }
 }

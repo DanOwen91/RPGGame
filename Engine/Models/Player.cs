@@ -4,13 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using Engine.Interfaces.Player;
+using Engine.Interfaces.GameItems;
+using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
     /// <summary>
     /// Character Class
     /// </summary>
-    public class Player : NotifyPropertyChangedBase
+    public class Player : NotifyPropertyChangedBase, IPlayer
     {
         /// <summary>
         /// Player's name
@@ -103,5 +106,6 @@ namespace Engine.Models
             }
         }
 
+        public ObservableCollection<IGameItem> Inventory { get; set; } = new ObservableCollection<IGameItem>();
     }
 }

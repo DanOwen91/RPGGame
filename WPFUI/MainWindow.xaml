@@ -22,9 +22,24 @@
             <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="DarkRed"></Label>
         
-        <Label Grid.Row="2" Grid.Column="0" Content="Inventory/Quest data" Background="LavenderBlush"></Label>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" Background="DarkRed"></Label>
+
+        <Grid Grid.Row="2" Grid.Column="0" Background="MediumAquamarine">
+            <TabControl>
+                <TabItem Header="Inventory">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*" Foreground="#FFDC2E2E" FontFamily="Trebuchet MS"/>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="auto"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Quests"/>
+
+            </TabControl>    
+        </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0" Background="Azure">
             <Grid.RowDefinitions>

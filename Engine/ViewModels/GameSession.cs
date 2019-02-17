@@ -65,7 +65,7 @@ namespace Engine.ViewModels
             CurrentWorld = WorldFactory.CreateWorld();
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
-            CurrentPlayer = PlayerFactory.CreatePlayer("Turtle");
+            CurrentPlayer = PlayerFactory.CreatePlayer("Turtle", "Dan");
         }
         public void MoveNorth()
         {

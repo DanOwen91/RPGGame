@@ -2,7 +2,7 @@
 
 namespace Engine.Models
 {
-    public class GameItem : IWeapon
+    public class GameItem : IGameItem
     {
         public int ItemId { get; set; }
         public string Name { get; set; }

@@ -49,3 +49,21 @@ D:\Projects\DanOwen91\RPGGame\WPFUI\obj\Debug\WPFUI.csproj.CoreCompileInputs.cac
 D:\Projects\DanOwen91\RPGGame\WPFUI\obj\Debug\WPFUI.csproj.CopyComplete
 D:\Projects\DanOwen91\RPGGame\WPFUI\obj\Debug\WPFUI.exe
 D:\Projects\DanOwen91\RPGGame\WPFUI\obj\Debug\WPFUI.pdb
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\bin\Debug\WPFUI.exe.config
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\bin\Debug\WPFUI.exe
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\bin\Debug\WPFUI.pdb
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\bin\Debug\Engine.dll
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\bin\Debug\Engine.pdb
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.csprojResolveAssemblyReference.cache
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\MainWindow.g.cs
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\App.g.cs
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI_MarkupCompile.cache
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI_MarkupCompile.lref
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\MainWindow.baml
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.g.resources
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.Properties.Resources.resources
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.csproj.GenerateResource.cache
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.csproj.CoreCompileInputs.cache
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.csproj.CopyComplete
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.exe
+C:\Users\Dan Owen\Source\Repos\RPGGame\WPFUI\obj\Debug\WPFUI.pdb
