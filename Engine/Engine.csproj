@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Factories\ItemFactory.cs" />
     <Compile Include="Factories\PlayerFactory.cs" />
+    <Compile Include="Factories\QuestFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
     <Compile Include="Interfaces\GameItems\IAmour.cs" />
     <Compile Include="Interfaces\GameItems\IConsumables.cs" />

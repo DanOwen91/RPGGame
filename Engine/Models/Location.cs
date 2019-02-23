@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.Interfaces.QuestInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,5 +32,9 @@ namespace Engine.Models
         /// Image we wish to display for location
         /// </summary>
         public string ImageName { get; set; }
+        /// <summary>
+        /// Available Quests at this location
+        /// </summary>
+        public List<IQuest> AvailableQuests { get; set; }
     }
 }

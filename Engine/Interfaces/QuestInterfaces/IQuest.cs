@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Interfaces.QuestInterfaces
 {
-    interface IQuest
+    public interface IQuest
     {
         int Id { get; set; }
         string Name { get; set; }

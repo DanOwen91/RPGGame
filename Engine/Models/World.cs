@@ -1,8 +1,5 @@
-﻿using System;
+﻿using Engine.Interfaces.QuestInterfaces;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Engine.Models
 {
@@ -10,7 +7,7 @@ namespace Engine.Models
     {
         private List<Location> locations = new List<Location>();
 
-        internal void AddLocation(int x, int y, string name, string description, string imageFilePath)
+        internal void AddLocation(int x, int y, string name, string description, string imageFilePath, IQuest availableQuest = null)
         {
             Location location = new Location()
             {
@@ -18,7 +15,8 @@ namespace Engine.Models
                 YCordinate = y,
                 Name = name,
                 Description = description,
-                ImageName = imageFilePath
+                ImageName = imageFilePath,
+                AvailableQuests = { availableQuest }
             };
             locations.Add(location);
         }
