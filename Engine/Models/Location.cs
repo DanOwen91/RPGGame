@@ -1,9 +1,5 @@
 ﻿using Engine.Interfaces.QuestInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Engine.Models
 {
@@ -35,6 +31,6 @@ namespace Engine.Models
         /// <summary>
         /// Available Quests at this location
         /// </summary>
-        public List<IQuest> AvailableQuests { get; set; }
+        public ObservableCollection<IQuest> AvailableQuests { get; set; } = new ObservableCollection<IQuest>();
     }
 }

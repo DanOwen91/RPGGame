@@ -7,6 +7,7 @@ using System.ComponentModel;
 using Engine.Interfaces.Player;
 using Engine.Interfaces.GameItems;
 using System.Collections.ObjectModel;
+using Engine.Interfaces.QuestInterfaces;
 
 namespace Engine.Models
 {
@@ -106,6 +107,15 @@ namespace Engine.Models
             }
         }
 
+        /// <summary>
+        /// Player Inventory observed on the screen
+        /// </summary>
         public ObservableCollection<IGameItem> Inventory { get; set; } = new ObservableCollection<IGameItem>();
+
+        /// <summary>
+        /// Player quests observed on the screen
+        /// </summary>
+        public ObservableCollection<IQuest> Quests { get; set; } = new ObservableCollection<IQuest>();
+
     }
 }

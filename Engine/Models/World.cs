@@ -16,8 +16,12 @@ namespace Engine.Models
                 Name = name,
                 Description = description,
                 ImageName = imageFilePath,
-                AvailableQuests = { availableQuest }
             };
+            if(availableQuest != null)
+            {
+                location.AvailableQuests.Add(availableQuest);
+            }
+
             locations.Add(location);
         }
 

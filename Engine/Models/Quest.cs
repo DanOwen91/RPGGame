@@ -18,6 +18,9 @@ namespace Engine.Models
         public ICollection<IGameItem> RewardItems { get; set; } = new List<IGameItem>();
         public ICollection<IGameItem> QuestItems { get; set; } = new List<IGameItem>();
 
+        public bool IsAccepted;
+        public bool IsCompleted;
+        
         public Quest(int id, string name, string description, int rewardPoints, int rewardGold, List<IGameItem> rewardGameItems, List<IGameItem> questItems)
         {
             this.Name = name;
@@ -27,7 +30,10 @@ namespace Engine.Models
             this.RewardPoints = rewardPoints;
             this.RewardItems = rewardGameItems;
             this.QuestItems = questItems;
+            this.IsCompleted = false;
+            this.IsAccepted = false;
         }
-    }
 
+    }
+   
 }

@@ -32,12 +32,10 @@ namespace Engine.ViewModels
             {
                 currentLocation = value;
                 OnPropertyChanged(nameof(CurrentLocation));
-
                 OnPropertyChanged(nameof(HasLocationToNorth));
                 OnPropertyChanged(nameof(HasLocationToSouth));
                 OnPropertyChanged(nameof(HasLocationToEast));
                 OnPropertyChanged(nameof(HasLocationToWest));
-
             }
         }
 
@@ -64,7 +62,7 @@ namespace Engine.ViewModels
         {
             CurrentWorld = WorldFactory.CreateWorld();
 
-            CurrentLocation = CurrentWorld.LocationAt(0, 0);
+            CurrentLocation = CurrentWorld.LocationAt(-1, 0);
             CurrentPlayer = PlayerFactory.CreatePlayer("Turtle", "Dan");
         }
         public void MoveNorth()
@@ -89,6 +87,19 @@ namespace Engine.ViewModels
         public void TakeHome()
         {
             CurrentLocation = CurrentWorld.LocationAt(-1, 0);
+        }
+        public void GivePlayerQuest()
+        {
+            foreach (Quest quest in CurrentLocation.AvailableQuests)
+            {
+                if (CurrentPlayer != null && quest != null)
+                {
+                    if (!CurrentPlayer.Quests.Any(q => q.Id == quest.Id))
+                    {
+                        CurrentPlayer.Quests.Add(quest);
+                    }
+                }
+            }
         }
     }
 }

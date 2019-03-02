@@ -77,5 +77,15 @@ namespace WPFUI
                 _gameSession.TakeHome();
             }
         }
+        private void OnClick_ContextMenuQuest(object sender, RoutedEventArgs e)
+        {
+            ContextMenu contextMenu = this.FindResource("QuestMenu") as ContextMenu;
+            contextMenu.PlacementTarget = sender as Button;
+            contextMenu.IsOpen = true;
+        }
+        private void OnClick_AcceptQuest(object sender, RoutedEventArgs e)
+        {
+            _gameSession.GivePlayerQuest();
+        }
     }
 }
